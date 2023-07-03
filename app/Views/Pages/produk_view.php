@@ -30,6 +30,8 @@ Tambah Data
 	<th scope="col">#</th>
 	<th scope="col">Nama</th>
 	<th scope="col">Harga</th>
+	<th scope="col">Diskon</th>
+	<th scope="col">Harga Diskon</th>
 	<th scope="col">Jumlah</th> 
 	<th scope="col">Foto</th> 
 	<th scope="col"></th> 
@@ -41,6 +43,8 @@ Tambah Data
 	<th scope="row"><?php echo $index+1?></th>
 	<td><?php echo $produk['nama'] ?></td> 
 	<td><?php echo $produk['harga'] ?></td> 
+	<td><?php echo $produk['diskon'] ?> </td> 
+	<td><?php echo $produk['harga'] - ($produk['harga']*$produk['diskon']/100) ?></td>
 	<td><?php echo $produk['jumlah'] ?></td> 
 	<td><img src="<?php echo base_url()."public/img/".$produk['foto'] ?>" width="100px"></td> 
 	<td>
@@ -70,6 +74,10 @@ Tambah Data
 				<div class="form-group">
 					<label for="name">Harga</label>
 					<input type="text" name="harga" class="form-control" id="harga" value="<?= $produk['harga'] ?>" placeholder="Harga Barang" required>
+				</div>
+				<div class="form-group">
+					<label for="name">Diskon</label>
+					<input type="text" name="diskon" class="form-control" id="harga" value="<?= $produk['diskon'] ?>" placeholder="Diskon" required>
 				</div>
 				<div class="form-group">
 					<label for="name">Jumlah</label>

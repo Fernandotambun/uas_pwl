@@ -20,6 +20,9 @@ if(session()->getFlashData('failed')){
 <?php
 }
 ?>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal">
+Tambah Data
+</button>
 <!-- Table with stripped rows -->
 <table class="table datatable">
 <thead>
@@ -102,5 +105,42 @@ if(session()->getFlashData('failed')){
 	<?php endforeach ?>   
 </tbody>
 </table>
+<!-- Add Modal Begin -->
+<div class="modal fade" id="addModal" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+		<div class="modal-header">
+			<h5 class="modal-title">Tambah Data</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<form action="<?= base_url('user') ?>" method="post" enctype="multipart/form-data">
+		<?= csrf_field(); ?>
+		<div class="modal-body">
+			<div class="form-group">
+				<label for="name">Username</label>
+				<input type="text" name="username" class="form-control" id="username" placeholder="Username" required>
+			</div>
+			<div class="form-group">
+				<label for="name">Email</label>
+				<input type="text" name="email" class="form-control" id="email" placeholder="Email" required>
+			</div>
+			<div class="form-group">
+				<label for="name">password</label>
+				<input type="text" name="password" class="form-control" id="jumlah" placeholder="password" required>
+			</div>
+			<div class="form-group">
+				<label for="name">Akses</label>
+				<input type="text" name="is_aktif" class="form-control" id="is_aktif" placeholder="Akses" required>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+			<button type="submit" class="btn btn-primary">Simpan</button>
+		</div>
+		</form>
+		</div>
+	</div>
+</div>
+<!-- Add Modal End -->
 <!-- End Table with stripped rows -->
 <?= $this->endSection() ?>

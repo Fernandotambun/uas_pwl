@@ -23,14 +23,7 @@ if (session()->getFlashData('success')) {
             <div class="card">
                 <div class="card-body">
                     <img src="<?php echo base_url() . "public/img/" . $produk['foto'] ?>" alt="..." width="300px">
-                    <h5 class="card-title"><?php echo $produk['nama'] ?><br>
-                    <?php if($produk['diskon']>0){
-                         echo "<s>". number_to_currency($produk['harga'], 'IDR')."</s><br>";
-                         echo "CUMA :". $produk['harga'] - ($produk['harga']*$produk['diskon']/100);
-                    }else{
-                        echo number_to_currency($produk['harga'], 'IDR');
-                    }
-                     ?></h5>
+                    <h5 class="card-title"><?php echo $produk['nama'] ?><br><?php echo number_to_currency($produk['harga'], 'IDR') ?></h5>
                     <button type="submit" class="btn btn-info rounded-pill">Beli</button>
                 </div>
             </div>

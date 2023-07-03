@@ -31,7 +31,8 @@
 						'nama' => $this->request->getPost('nama'),
 						'harga' => $this->request->getPost('harga'),
 						'jumlah' => $this->request->getPost('jumlah'),
-						'keterangan' => $this->request->getPost('keterangan')
+						'keterangan' => $this->request->getPost('keterangan'),
+						'diskon' => $this->request->getPost('diskon')
 					];
 			
 					$dataFoto = $this->request->getFile('foto');
@@ -61,7 +62,8 @@
 						'nama' => $this->request->getPost('nama'),
 						'harga' => $this->request->getPost('harga'),
 						'jumlah' => $this->request->getPost('jumlah'),
-						'keterangan' => $this->request->getPost('keterangan')
+						'keterangan' => $this->request->getPost('keterangan'),
+						'diskon' => $this->request->getPost('diskon')
 					];
 
 					if($this->request->getPost('check')){

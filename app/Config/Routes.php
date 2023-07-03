@@ -58,6 +58,7 @@ $routes->get('/produk/delete/(:any)', 'ProdukController::delete/$1', ['filter' =
 
 //User Routes
 $routes->get('/user', 'Pages::user', ['filter' => 'auth']);
+$routes->add('/user', 'UserController::create', ['filter' => 'auth']);
 $routes->add('/user/edit/(:any)', 'UserController::edit/$1', ['filter' => 'auth']);
 $routes->get('/user/delete/(:any)', 'UserController::delete/$1', ['filter' => 'auth']);
 

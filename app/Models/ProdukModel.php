@@ -7,6 +7,6 @@
 			protected $table = 'barang'; 
 			protected $primaryKey = 'id';
 			protected $allowedFields = [
-				'nama','harga','jumlah','keterangan', 'foto'
+				'nama','harga','jumlah','keterangan', 'foto', 'diskon'
 			];  
 		}

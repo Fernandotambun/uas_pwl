@@ -22,7 +22,7 @@ $password = [
                 <div class="d-flex justify-content-center py-4">
                     <a href="index.html" class="logo d-flex align-items-center w-auto">
                         <img src="<?php echo base_url() ?>public/NiceAdmin/assets/img/logo.png" alt="">
-                        <span class="d-none d-lg-block">Toko Tembakau</span>
+                        <span class="d-none d-lg-block">Reg Quiem</span>
                     </a>
                 </div><!-- End Logo -->
 
@@ -78,7 +78,7 @@ $password = [
                     <!-- You can delete the links only if you purchased the pro version. -->
                     <!-- Licensing information: https://bootstrapmade.com/license/ -->
                     <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-                    Designed by <a href=".">Toko Selera</a>
+                    Designed by <a href=".">Reg Quiem</a>
                 </div>
 
             </div>
