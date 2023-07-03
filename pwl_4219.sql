@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 02, 2023 at 03:43 PM
+-- Generation Time: Jul 03, 2023 at 02:08 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -31,6 +31,7 @@ CREATE TABLE `barang` (
   `id` int(11) UNSIGNED NOT NULL,
   `nama` varchar(50) DEFAULT NULL,
   `harga` float DEFAULT NULL,
+  `diskon` int(3) NOT NULL,
   `jumlah` int(11) DEFAULT NULL,
   `keterangan` varchar(100) DEFAULT NULL,
   `foto` varchar(225) DEFAULT NULL
@@ -40,10 +41,10 @@ CREATE TABLE `barang` (
 -- Dumping data for table `barang`
 --
 
-INSERT INTO `barang` (`id`, `nama`, `harga`, `jumlah`, `keterangan`, `foto`) VALUES
-(1, 'Indomie Gorengs', 2500, 50, 'Indomie Seleraku', 'indomie-mi-goreng-special_detail_094906814 (1).png'),
-(2, 'Sari Roti Kismis', 5000, 100, 'Roti Single', 'roti_tawar_raisin1.jpg'),
-(4, 'Dji Sam Soe Refills', 20000, 24, 'Ududnya Orang NU', 'dji-sam-soe-234-premium-12-285587.jpg');
+INSERT INTO `barang` (`id`, `nama`, `harga`, `diskon`, `jumlah`, `keterangan`, `foto`) VALUES
+(1, 'Indomie Gorengs', 2500, 10, 50, 'Indomie Seleraku', 'indomie-mi-goreng-special_detail_094906814 (1).png'),
+(2, 'Sari Roti Kismis', 5000, 20, 100, 'Roti Single', 'roti_tawar_raisin1.jpg'),
+(4, 'Dji Sam Soe Refills', 20000, 0, 24, 'Ududnya Orang NU', 'dji-sam-soe-234-premium-12-285587.jpg');
 
 -- --------------------------------------------------------
 
